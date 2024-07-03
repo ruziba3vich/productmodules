@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+import "google/protobuf/wrappers.proto";
+
+package com.prodonik.genprotos;
+
+message Product {
+    string id = 1;
+    string name = 2;
+    google.protobuf.StringValue description = 3;
+    double price = 4;
+    int32 stockQuantity = 5;
+    string categoryId = 6;
+}

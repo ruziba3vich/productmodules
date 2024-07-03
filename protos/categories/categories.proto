@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "google/protobuf/wrappers.proto";
+import "products.proto";
+
+package com.prodonik.genprotos;
+
+message Category {
+    string id = 1;
+    string name = 2;
+    google.protobuf.StringValue description = 3;
+    repeated Product products = 4;
+}
