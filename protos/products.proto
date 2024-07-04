@@ -70,6 +70,14 @@ message GetAllCategoriesResponse {
     repeated Category categories = 1;
 }
 
+message PurchaseProductsRequest {
+    repeated Product products = 1;
+}
+
+message PurchaseProductsResponse {
+    string message = 1;
+}
+
 service CategoryService {
     rpc CreateCategory(CategoryRequest) returns (Category);
     rpc UpdateCategory(CategoryRequest) returns (Category);
@@ -77,4 +85,5 @@ service CategoryService {
     rpc GetCategoryByName(CategoryName) returns (Category);
     rpc GetAllCategories(google.protobuf.Empty) returns (GetAllCategoriesResponse);
     rpc DeleteCategory(DeleteCategoryRequest) returns (google.protobuf.Empty);
+    rpc PurchaseProducts(PurchaseProductsRequest) returns (PurchaseProductsResponse);
 }
